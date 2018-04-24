@@ -1,0 +1,54 @@
+{
+    "name": "xversial/laravel-cdn-helper",
+    "description": "Laravel CDN Helper, adds blade directive to statically write asset links into compiled views.",
+    "keywords": ["laravel", "cdn", "asset", "helper", "static", "blade"],
+    "license": "proprietary",
+    "authors": [
+        {
+            "name": "Brandon Xversial",
+            "email": "xversial@vionox.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/support": "^5.0,<5.7",
+        "illuminate/console": "^5.0,<5.7",
+        "illuminate/filesystem": "^5.0,<5.7",
+        "symfony/class-loader": "^2.3|^3.0"
+    },
+    "require-dev": {
+        "illuminate/config": "^5.0,<5.7",
+        "illuminate/view": "^5.0,<5.7",
+        "mockery/mockery": "^1.0",
+        "fzaninotto/faker": "^1.4",
+        "phpunit/phpunit": "^7.0",
+        "scrutinizer/ocular": "~1.1",
+        "squizlabs/php_codesniffer": "~2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Xversial\\LaravelCdnHelper\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            ":vendor\\:package_name\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "cs": "phpcs --standard=psr2 src/"
+    },
+    "extra": {
+		"component": "package",
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Xversial\\LaravelCdnHelper\\CdnHelperServiceProvider"
+            ]
+        }
+    },
+	"minimum-stability": "stable"
+}
